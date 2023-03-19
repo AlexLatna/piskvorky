@@ -23,6 +23,7 @@ html {
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
   padding-top: 60px;
+  padding-bottom: 40px;
   text-align: center;
 }
 
@@ -70,6 +71,7 @@ a {
   width: 30%;
   height: 25%;
   background-color:#1fcca4 ;
+  border-bottom: 1px solid #283e50;
 }
 
 .hra {
