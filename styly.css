@@ -68,16 +68,20 @@ a {
 }
 
 .pravidla {
+  padding-top: 20px;
   width: 30%;
   height: 25%;
   background-color:#1fcca4 ;
   border-bottom: 1px solid #283e50;
+  text-decoration: none;
 }
 
 .hra {
+  padding-top: 20px;
   width: 30%;
   height: 25%;
   background-color: #0197f6;
+  text-decoration: none;
 }
 
 .pravidla:hover {
