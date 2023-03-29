@@ -22,6 +22,8 @@ html {
 
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
+  background-size: cover;
+  background-repeat: no-repeat;
   padding-top: 60px;
   padding-bottom: 40px;
   text-align: center;
