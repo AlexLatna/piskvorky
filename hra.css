@@ -66,5 +66,16 @@ img {
   display: flex;
   flex-wrap: wrap;
   border: 2px solid black;
+  width: 100%;
 }
 
+main button {
+  flex-basis: 10%;
+  height: 8vmin;
+  border: 1px solid black;
+  background-color: rgba(225, 255, 255, 0.6) ;
+}
+
+button:hover, button:focus {
+  background-color: rgba(225, 255, 255, 0.8);
+}
