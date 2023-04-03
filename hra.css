@@ -29,8 +29,8 @@ h1 {
 }
 
 .circle {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
   border: 3px solid white;
   border-radius: 50%;
   margin-bottom: 5px;
@@ -42,6 +42,7 @@ h2 {
   gap: 5px;
   font-size: 25px;
   margin: 0;
+  justify-content: space-between;
 }
 
 img {
