@@ -11,6 +11,8 @@ body {
   margin: 0 auto;
   color: #ffffff;
   padding: 50px;
+  max-width: 80vmin;
+  min-height: 100vmin;
 }
 
 h1 {
