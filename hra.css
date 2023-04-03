@@ -35,3 +35,36 @@ h2 {
   font-size: 25px;
   margin: 0;
 }
+
+img {
+  width: 30px;
+}
+
+.home, .restart {
+  border-radius: 5px;
+  padding: 10px;
+  display: inline-block;
+} 
+
+.home {
+  background-color: mediumspringgreen;
+}
+
+.home:hover, .home:focus {
+  background-color: mediumseagreen;
+}
+
+.restart {
+  background-color: royalblue;
+}
+
+.restart:hover, .restart:focus {
+  background-color: blue;
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+}
+
