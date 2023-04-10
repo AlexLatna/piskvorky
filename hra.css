@@ -115,12 +115,12 @@ button:focus {
   background-image:url("cross.svg") ;
 }
 
-
 .board__field--circle,
 .board__field--cross {
   background-size: cover;
+  /*
   width: 50%;
-  height: 50%;
+  height: 50%; */
   animation: zoom 0.35s linear;
   color: black;
 }

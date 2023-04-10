@@ -1,30 +1,27 @@
 let currentPlayer = 'circle';
 
-const btnElm1 = document.querySelector('.table:nth-child(1)');
-const btnElm2 = document.querySelector('.table:nth-child(2)');
-const btnElm3 = document.querySelector('.table:nth-child(3)');
-const btnElm4 = document.querySelector('.table:nth-child(4)');
-const btnElm5 = document.querySelector('.table:nth-child(5)');
-const btnElm6 = document.querySelector('.table:nth-child(6)');
-const btnElm7 = document.querySelector('.table:nth-child(7)');
-const btnElm8 = document.querySelector('.table:nth-child(8)');
-const btnElm9 = document.querySelector('.table:nth-child(9)');
-const btnElm10 = document.querySelector('.table:nth-child(10)'); 
+const btnElm1 = document.querySelector('button:nth-child(1)');
+//console.log(btnElm1)
+const btnElm2 = document.querySelector('button:nth-child(2)');
+const btnElm3 = document.querySelector('button:nth-child(3)');
+const btnElm4 = document.querySelector('button:nth-child(4)');
+const btnElm5 = document.querySelector('button:nth-child(5)');
+const btnElm6 = document.querySelector('button:nth-child(6)');
+const btnElm7 = document.querySelector('button:nth-child(7)');
+const btnElm8 = document.querySelector('button:nth-child(8)');
+const btnElm9 = document.querySelector('button:nth-child(9)');
+const btnElm10 = document.querySelector('button:nth-child(10)');
 
-
-const circleElm = document.querySelector('.circle')
+const circleElm = document.querySelector(".circle");
 
 const changeSign = (event) => {
   if (currentPlayer === 'circle') {
-    event.target.classList.add('board__field--circle');
-    currentPlayer = 'cross';
-    document.querySelector('.circle').classList.remove('board__field--circle');
-    document.querySelector('.circle').classList.add('board__field--cross');
+    circleElm.classList.add('board__field--circle');
+    //circleElm.event.target.classList.add('board__field--circle');
   } else {
-    event.target.classList.add('board__field--cross');
-    currentPlayer = 'circle';
-    document.querySelector('.circle').classList.remove('board__field--cross');
-    document.querySelector('.circle').classList.add('board__field--circle');
+    circleElm.classList.remove('board__field--circle');
+    circleElm.classList.add('board__field--cross');
+    //circleElm.event.target.classList.add('board__field--cross');
   }
 
   event.target.disabled = true;
@@ -43,11 +40,11 @@ btnElm9.addEventListener('click', changeSign)
 btnElm10.addEventListener('click', changeSign) 
 
 
+/*
 const restartElm = document.querySelector('.restart')
 restart.addEventListener('click', (event) => {
   if (confirm('Opravdu chceš začít znovu?')) {
       event.preventDefault()
   }
 }) 
-
-
+*/
