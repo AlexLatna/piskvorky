@@ -12,8 +12,23 @@ const btnElm8 = document.querySelector('button:nth-child(8)');
 const btnElm9 = document.querySelector('button:nth-child(9)');
 const btnElm10 = document.querySelector('button:nth-child(10)');
 
-const circleElm = document.querySelector(".circle");
+const circleElm = document.querySelector('.circle');
 
+const changeSign = (event) => {
+  if (currentPlayer === 'circle') {
+    currentPlayer = 'cross';
+    circleElm.classList.remove('board__field--cross');
+    circleElm.classList.add('board__field--circle');
+  } else {
+    currentPlayer = 'circle';
+    circleElm.classList.remove('board__field--circle');
+    circleElm.classList.add('board__field--cross');
+  }
+
+  event.target.disabled = true;
+};
+
+/*
 const changeSign = (event) => {
   if (currentPlayer === 'circle') {
     circleElm.classList.add('board__field--circle');
@@ -26,25 +41,24 @@ const changeSign = (event) => {
 
   event.target.disabled = true;
 };
+*/
+
+btnElm1.addEventListener('click', changeSign);
+btnElm2.addEventListener('click', changeSign);
+btnElm3.addEventListener('click', changeSign);
+btnElm4.addEventListener('click', changeSign);
+btnElm5.addEventListener('click', changeSign);
+btnElm6.addEventListener('click', changeSign);
+btnElm7.addEventListener('click', changeSign);
+btnElm8.addEventListener('click', changeSign);
+btnElm9.addEventListener('click', changeSign);
+btnElm10.addEventListener('click', changeSign);
 
 
-btnElm1.addEventListener('click', changeSign)
-btnElm2.addEventListener('click', changeSign)
-btnElm3.addEventListener('click', changeSign)
-btnElm4.addEventListener('click', changeSign)
-btnElm5.addEventListener('click', changeSign)
-btnElm6.addEventListener('click', changeSign)
-btnElm7.addEventListener('click', changeSign)
-btnElm8.addEventListener('click', changeSign)
-btnElm9.addEventListener('click', changeSign)
-btnElm10.addEventListener('click', changeSign) 
-
-
-/*
 const restartElm = document.querySelector('.restart')
-restart.addEventListener('click', (event) => {
-  if (confirm('Opravdu chceš začít znovu?')) {
+restartElm.addEventListener('click', (event) => {
+  if (!confirm('Opravdu chceš začít znovu?')) {
       event.preventDefault()
   }
 }) 
-*/
+
