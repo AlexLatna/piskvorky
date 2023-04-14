@@ -12,36 +12,21 @@ const btnElm8 = document.querySelector('button:nth-child(8)');
 const btnElm9 = document.querySelector('button:nth-child(9)');
 const btnElm10 = document.querySelector('button:nth-child(10)');
 
-const circleElm = document.querySelector('.circle');
+const kruzokElm = document.querySelector('.kruzok');
 
 const changeSign = (event) => {
   if (currentPlayer === 'circle') {
     currentPlayer = 'cross';
-    circleElm.classList.remove('board__field--cross');
-    circleElm.classList.add('board__field--circle');
+    kruzokElm.classList.remove('board__field--cross');
+    kruzokElm.classList.add('board__field--circle');
   } else {
     currentPlayer = 'circle';
-    circleElm.classList.remove('board__field--circle');
-    circleElm.classList.add('board__field--cross');
+    kruzokElm.classList.remove('board__field--circle');
+    kruzokElm.classList.add('board__field--cross');
   }
 
   event.target.disabled = true;
 };
-
-/*
-const changeSign = (event) => {
-  if (currentPlayer === 'circle') {
-    circleElm.classList.add('board__field--circle');
-    //circleElm.event.target.classList.add('board__field--circle');
-  } else {
-    circleElm.classList.remove('board__field--circle');
-    circleElm.classList.add('board__field--cross');
-    //circleElm.event.target.classList.add('board__field--cross');
-  }
-
-  event.target.disabled = true;
-};
-*/
 
 btnElm1.addEventListener('click', changeSign);
 btnElm2.addEventListener('click', changeSign);
@@ -54,11 +39,10 @@ btnElm8.addEventListener('click', changeSign);
 btnElm9.addEventListener('click', changeSign);
 btnElm10.addEventListener('click', changeSign);
 
-
+/*
 const restartElm = document.querySelector('.restart')
 restartElm.addEventListener('click', (event) => {
   if (!confirm('Opravdu chceš začít znovu?')) {
       event.preventDefault()
   }
-}) 
-
+}) */
