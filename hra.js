@@ -12,17 +12,16 @@ const btnElm8 = document.querySelector('button:nth-child(8)');
 const btnElm9 = document.querySelector('button:nth-child(9)');
 const btnElm10 = document.querySelector('button:nth-child(10)');
 
-const kruzokElm = document.querySelector('.kruzok');
 
 const changeSign = (event) => {
   if (currentPlayer === 'circle') {
     currentPlayer = 'cross';
-    kruzokElm.classList.remove('board__field--cross');
-    kruzokElm.classList.add('board__field--circle');
+    event.target.classList.remove('board__field--cross');
+    event.target.classList.add('board__field--circle');
   } else {
     currentPlayer = 'circle';
-    kruzokElm.classList.remove('board__field--circle');
-    kruzokElm.classList.add('board__field--cross');
+    event.target.classList.remove('board__field--circle');
+    event.target.classList.add('board__field--cross');
   }
 
   event.target.disabled = true;
