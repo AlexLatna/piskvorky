@@ -29,7 +29,7 @@ h1 {
   margin: 30px 0;
 }
 
-.kruzok {
+.circle {
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -37,6 +37,16 @@ h1 {
   display: inline-block;
   margin-left: 0.5rem;
 }
+
+
+.cross {
+  background-image: url("cross.svg");
+  width: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: invert(100%);
+}
+
 
 h2 {
   display: flex;
@@ -108,11 +118,11 @@ button:focus {
 
 
 .board__field--circle {
-  background-image:url("circle.svg") ;
+  background-image: url("circle.svg");
 }
 
 .board__field--cross {
-  background-image:url("cross.svg") ;
+  background-image: url("cross.svg");
 }
 
 .board__field--circle,
@@ -124,9 +134,3 @@ button:focus {
   animation: zoom 0.35s linear;
   color: black;
 }
-
-
-
-
-
-
