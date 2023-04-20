@@ -24,7 +24,7 @@ const changeSign = (event) => {
 //vytvorenie poľa z main
 const playField = document.querySelectorAll('button');
 const playFieldArray = Array.from(playField);
-const signs = playFieldArray.map((sign) => {
+const playFieldSigns = playFieldArray.map((sign) => {
   if (sign.classList.contains('board__field--cross')) {
     return 'x';
   } else if (sign.classList.contains('board__field--circle')) {
@@ -34,28 +34,31 @@ const signs = playFieldArray.map((sign) => {
   }
 });
 
-const winner = findWinner(signs);
+const winner = findWinner(playFieldSigns);
 if (winner === 'x') {
   setTimeout(() => {
     alert('Vyhrál křížik!');
     location.reload();
-  }, 200);
+  }, 500);
 } else if (winner === 'o') {
   setTimeout(() => {
     alert('Vyhrálo kolečko!');
     location.reload();
-  }, 200);
+  }, 500);
 } else if (winner === 'tie') {
   setTimeout(() => {
     alert('Hra skončila remízou.');
     location.reload();
-  }, 200);
+  }, 500);
 }
+
+
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
   button.addEventListener('click', changeSign);
 });
+
 
 const restartElm = document.querySelector('.restart');
 restartElm.addEventListener('click', (event) => {
