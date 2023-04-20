@@ -19,38 +19,43 @@ const changeSign = (event) => {
   }
 
   event.target.disabled = true;
+
+  const playFieldSigns = playFieldArray.map((sign) => {
+    if (sign.classList.contains('board__field--cross')) {
+      return 'x';
+    } else if (sign.classList.contains('board__field--circle')) {
+      return 'o';
+    } else {
+      return '_';
+    }
+  });
+  
+  const winner = findWinner(playFieldSigns);
+  if (winner === 'x') {
+    setTimeout(() => {
+      alert('Vyhrál křížik!');
+      location.reload();
+    }, 500);
+  } else if (winner === 'o') {
+    setTimeout(() => {
+      alert('Vyhrálo kolečko!');
+      location.reload();
+    }, 500);
+  } else if (winner === 'tie') {
+    setTimeout(() => {
+      alert('Hra skončila remízou.');
+      location.reload();
+    }, 500);
+  }
+  
 };
+
+
 
 //vytvorenie poľa z main
 const playField = document.querySelectorAll('button');
 const playFieldArray = Array.from(playField);
-const playFieldSigns = playFieldArray.map((sign) => {
-  if (sign.classList.contains('board__field--cross')) {
-    return 'x';
-  } else if (sign.classList.contains('board__field--circle')) {
-    return 'o';
-  } else {
-    return '_';
-  }
-});
 
-const winner = findWinner(playFieldSigns);
-if (winner === 'x') {
-  setTimeout(() => {
-    alert('Vyhrál křížik!');
-    location.reload();
-  }, 500);
-} else if (winner === 'o') {
-  setTimeout(() => {
-    alert('Vyhrálo kolečko!');
-    location.reload();
-  }, 500);
-} else if (winner === 'tie') {
-  setTimeout(() => {
-    alert('Hra skončila remízou.');
-    location.reload();
-  }, 500);
-}
 
 
 
