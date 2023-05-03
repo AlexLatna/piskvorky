@@ -35,17 +35,17 @@ const changeSign = (event) => {
     setTimeout(() => {
       alert('Vyhrál křížik!');
       location.reload();
-    }, 500);
+    }, 300);
   } else if (winner === 'o') {
     setTimeout(() => {
       alert('Vyhrálo kolečko!');
       location.reload();
-    }, 500);
+    }, 300);
   } else if (winner === 'tie') {
     setTimeout(() => {
       alert('Hra skončila remízou.');
       location.reload();
-    }, 500);
+    }, 300);
   }
   
 };
